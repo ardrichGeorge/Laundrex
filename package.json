@@ -1,0 +1,51 @@
+{
+  "name": "laundrex",
+  "version": "1.0.0",
+  "description": "Monorepo for Laundrex: Client + Server",
+  "main": "index.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node index.js",
+    "dev:server": "npm run dev --prefix server",
+    "dev:client": "npm run dev --prefix client",
+    "dev": "concurrently \"npm run dev:client\" \"npm run dev:server\"",
+    "test": "jest",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "lint:all": "eslint client server",
+    "format:all": "prettier --write .",
+    "build": "npm run build --prefix client",
+    "prepare": "husky"
+  },
+  "engines": {
+    "node": ">=22.0.0",
+    "npm": ">=11.0.0"
+  },
+  "author": "Afrofingers",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ardrichgeorge/laundrex.git"
+  },
+  "devDependencies": {
+    "@babel/eslint-parser": "^7.27.5",
+    "@babel/plugin-syntax-jsx": "^7.27.1",
+    "concurrently": "^9.2.0",
+    "eslint": "^9.29.0",
+    "eslint-plugin-react": "^7.37.5",
+    "husky": "^9.1.7",
+    "jest": "^30.0.2",
+    "jest-environment-jsdom": "^30.0.2",
+    "lint-staged": "^16.1.2",
+    "nodemon": "^3.1.10",
+    "prettier": "^3.5.3"
+  },
+  "lint-staged": {
+    "*.{js,jsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ]
+  }
+}

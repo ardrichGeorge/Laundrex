@@ -1,0 +1,45 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "Laundrex backend server",
+  "main": "App.js",
+  "type": "module",
+  "scripts": {
+    "start": "node App.js",
+    "dev": "nodemon App.js",
+    "test": "jest",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "format": "prettier --write ."
+  },
+  "author": "AFROFINGERS",
+  "license": "MIT",
+  "keywords": [
+    "nodejs",
+    "express",
+    "backend",
+    "api",
+    "javascript",
+    "laundrex"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ardrichgeorge/laundrex-server.git"
+  },
+  "dependencies": {
+    "bcryptjs": "^3.0.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.6.1",
+    "express": "^5.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.16.1",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "eslint": "^9.29.0",
+    "jest": "^30.0.2",
+    "nodemon": "^3.1.10",
+    "prettier": "^3.5.3",
+    "supertest": "^6.3.3"
+  }
+}
